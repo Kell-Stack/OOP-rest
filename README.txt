@@ -2,3 +2,7 @@ This is my OOP-rest project. We were to build a yelp like restaurant review page
 
 
 
+---
+permalink: /index.html
+---
+
