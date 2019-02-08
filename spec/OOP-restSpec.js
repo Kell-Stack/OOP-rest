@@ -1,4 +1,4 @@
-describe("Calculator", function() {
+describe("OOP-rest-jasmine", function() {
     var Calculator = require('../app/OOP-rest');
     var calculator;
   

@@ -35,7 +35,7 @@
     }
  }
 
- class Restaurants {
+ class Rests {
     constructor(restName) {
     this.restName = restName;
     }
@@ -54,6 +54,13 @@ dataBase.users.push(angA);
 
 let ginL = new User ("Gina", "Lash");
 dataBase.users.push(ginL);
+
+let johnA = new User ("Johnny", "Abatti");
+dataBase.users.push(johnA);
+
+let nanM = new User ("Nannette", "Manoir");
+dataBase.users.push(nanM);
+
 console.log(dataBase.users);
 console.log(dataBase.usersArray)
 
@@ -62,16 +69,49 @@ console.log(dataBase.usersArray)
 //#Rename new restaurants
 
 //--------------------------------------------sTART RESTS-------------------------------------------------------
-let thaiRon = new Restaurants("Call Thai-Ron");
+let thaiRon = new Rests("Call Thai-Ron");
 dataBase.restaurants.push(thaiRon);
 
 
-let phoKing = new Restaurants("Pho King");
+let phoKing = new Rests("Pho King");
 dataBase.restaurants.push(phoKing);
 
 
-let dimLightsSum = new Restaurants("Dim the Lights Sum");
+let dimLightsSum = new Rests("Dim the Lights Sum");
 dataBase.restaurants.push(dimLightsSum);
+
+let jamCrazy = new Rests("Jamaican Me Crazy");
+dataBase.restaurants.push(jamCrazy);
+
+let burgerIt = new Rests("Burg-ehtabout-It");
+dataBase.restaurants.push(burgerIt);
+
+
+
+
+//   "restName": [ "Jamaican Me Crazy", "Burg-ehtabout-It"],
+//   "cuisine": ["Thai", "Vietnamese", "Dim Sum", "Jamaican", "American", "Fusion", "Soul", "Italian"],
+//   "user": ["Angela Andaconda", "Gina Lash", "Johnny Abatti", "Nannette Manoir"]
+//   "score": [1,2,3,4,5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log(dataBase.restaurants);
 console.log(dataBase.restsArray);      //#remind yuri
 
@@ -117,9 +157,11 @@ function showRests(){
     let html = "";
     html += "<br>";
     html += dataBase.restaurants[0].restName + "<br>"; 
-    html += dataBase.restaurants[1].restName;      // converting data into html w jquery
-    console.log("hello yuri");
-    // $("#rest1").append(html);
+    html += dataBase.restaurants[1].restName + "<br>";      // converting data into html w jquery
+    html += dataBase.restaurants[2].restName + "<br>";
+    html += dataBase.restaurants[3].restName + "<br>";
+    html += dataBase.restaurants[4].restName + "<br>";
+    // console.log("hello yuri");
     $("#rest1").append(html);
 
 }
@@ -128,6 +170,9 @@ function showUsers () {
     let html = "";
     html += "<br>";
     html += dataBase.users[0].firstName + " " + dataBase.users[0].lastName + "<br>";
+    html += dataBase.users[1].firstName + " " + dataBase.users[1].lastName + "<br>";
+    html += dataBase.users[2].firstName + " " + dataBase.users[2].lastName + "<br>";
+    html += dataBase.users[3].firstName + " " + dataBase.users[3].lastName + "<br>";
     $("#user1").append(html);
 
 }
@@ -393,7 +438,7 @@ $(document).ready(function(){        // main program/interface
   
   
   // flaws/caveats in my demo: 
-  // 1. i have my lines of code that are declaring and adding new Users and Restaurants and etc interspersed with my class declarations. this is confusing. i should define my classes at the top, and then have a separate section at the bottom where i mess around with initializing my rr object, and defining and adding Users and other objects. 
+  // 1. i have my lines of code that are declaring and adding new Users and Rests and etc interspersed with my class declarations. this is confusing. i should define my classes at the top, and then have a separate section at the bottom where i mess around with initializing my rr object, and defining and adding Users and other objects. 
   //    - why did i do it that way? it's just how i ended up writing it in a few minutes =) 
   //    - okay, so why haven't i fixed it yet? well, 
   // 2. 
