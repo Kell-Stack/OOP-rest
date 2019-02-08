@@ -7,6 +7,8 @@
 
 
 //my database.... constructor doesn't take any arguments
+
+//--------------------------------------------START DATABASE-------------------------------------------------------
   class SiteDataBase {
     constructor() {
       // All main properties should go here.
@@ -15,7 +17,7 @@
       this.users = [];
       this.categories = [];
     }
-   get usersArray () {        //you need the get in front of this function inside Class
+   get usersArray () {        //you need the "get" in front of this function inside Class
         return this.users;
    }          
    get restsArray () {
@@ -23,10 +25,10 @@
    }
   }
 
+ //--------------------------------------------END DATABASE-------------------------------------------------------
 
 
-
-  //my classes - more specific
+ //--------------------------------------------START CLASSES-------------------------------------------------------
 
  class User {
     constructor(firstName, lastName) {
@@ -36,14 +38,19 @@
  }
 
  class Rests {
-    constructor(restName) {
+    constructor(restName, cuisine, rating) {
     this.restName = restName;
+    this.cuisine = cuisine;
+    this.rating = rating;
     }
  }
 
 
 //create object to add people, restaurants, etc into db
 let dataBase =  new SiteDataBase ();
+
+ //--------------------------------------------END CLASSES-------------------------------------------------------
+
 
 //--------------------------------------------START USERS-------------------------------------------------------
 
@@ -66,33 +73,43 @@ console.log(dataBase.usersArray)
 
 //--------------------------------------------END USERS-------------------------------------------------------
 
-//#Rename new restaurants
 
-//--------------------------------------------sTART RESTS-------------------------------------------------------
-let thaiRon = new Rests("Call Thai-Ron");
+//--------------------------------------------START RESTS-------------------------------------------------------
+let thaiRon = new Rests("Call Thai-Ron", "Thai", 6 );
 dataBase.restaurants.push(thaiRon);
 
 
-let phoKing = new Rests("Pho King");
+let phoKing = new Rests("Pho King", "Vietnamese", 5);
 dataBase.restaurants.push(phoKing);
 
 
-let dimLightsSum = new Rests("Dim the Lights Sum");
+let dimLightsSum = new Rests("Dim the Lights Sum", "Chinese", 4);
 dataBase.restaurants.push(dimLightsSum);
 
-let jamCrazy = new Rests("Jamaican Me Crazy");
+
+let jamCrazy = new Rests("Jamaican Me Crazy", "Jamaican", 7);
 dataBase.restaurants.push(jamCrazy);
 
-let burgerIt = new Rests("Burg-ehtabout-It");
+
+let burgerIt = new Rests("Burg-ehtabout-It", "American", 3);
 dataBase.restaurants.push(burgerIt);
 
 
 
+//--------------------------------------------END RESTS-------------------------------------------------------
 
-//   "restName": [ "Jamaican Me Crazy", "Burg-ehtabout-It"],
+
+// //--------------------------------------------Start Cuisine-------------------------------------------------------
+
+// let thai = new cuisine("Thai");
+// dataBase.restaurants.push(thai);
+
+
 //   "cuisine": ["Thai", "Vietnamese", "Dim Sum", "Jamaican", "American", "Fusion", "Soul", "Italian"],
-//   "user": ["Angela Andaconda", "Gina Lash", "Johnny Abatti", "Nannette Manoir"]
-//   "score": [1,2,3,4,5]
+
+  // const thaiRon = new Restaurant ("Call Thai-Ron", "Thai", 6);
+  // const phoKing = new Restaurant ("Pho King", "Vietnamese", 5);
+  // const dimLightsSum = new Restaurant ("Dim the Lights Sum", "Chinese", 4);
 
 
 
@@ -110,10 +127,8 @@ dataBase.restaurants.push(burgerIt);
 
 
 
-
-
-console.log(dataBase.restaurants);
-console.log(dataBase.restsArray);      //#remind yuri
+// console.log(dataBase.restaurants);
+// console.log(dataBase.restsArray);      //#remind yuri
 
 
 //# we have two ways of grabbing our rests arrays --> dataBase.rests or dataBase.restsArray
@@ -123,31 +138,31 @@ console.log(dataBase.restsArray);      //#remind yuri
 
 
 
-class RestRec {
-    //use the psudo values in constructor to create properties that are equal to what you plus in to the arguments
-    constructor (user, allRests, searchFilter){
-      this.user = user;
-      this.allRests = allRests;
-      this.searchFilter = searchFilter;
-  }
-  // write a func to return the suggested rests
-  // change prune name to strainedRests
-    sugRests(){
-        // return this.allRests;
-        return searchFilter.prune;
+// class RestRec {
+//     //use the psudo values in constructor to create properties that are equal to what you plus in to the arguments
+//     constructor (user, allRests, searchFilter){
+//       this.user = user;
+//       this.allRests = allRests;
+//       this.searchFilter = searchFilter;
+//   }
+//   // write a func to return the suggested rests
+//   // change prune name to strainedRests
+//     sugRests(){
+//         // return this.allRests;
+//         return searchFilter.prune;
           
-    }
-  }
+//     }
+//   }
   
   
   
-  class Filter {
-    constructor (minStarRate, desiredCuisine, unFilterRest){
-      this.minStarRate = minStarRate;
-      this.desiredCuisines = desiredCuisines;
-      this.unFilterRest = unFilterRest;
-    }
-  }
+//   class Filter {
+//     constructor (minStarRate, desiredCuisine, unFilterRest){
+//       this.minStarRate = minStarRate;
+//       this.desiredCuisines = desiredCuisines;
+//       this.unFilterRest = unFilterRest;
+//     }
+//   }
   
 
 
@@ -177,7 +192,16 @@ function showUsers () {
 
 }
 
-
+function showCuisine () {
+    let html = "";
+    html += "<br>";
+    html += dataBase.restaurants[0].cuisine + "<br>";
+    html += dataBase.restaurants[1].cuisine + "<br>";
+    html += dataBase.restaurants[2].cuisine + "<br>";
+    html += dataBase.restaurants[3].cuisine + "<br>";
+    html += dataBase.restaurants[4].cuisine + "<br>";
+    $("#cuisine1").append(html);
+}
 
 //# all functions will be above
 
@@ -186,8 +210,8 @@ function showUsers () {
 
 $(document).ready(function(){        // main program/interface
     showRests();
-    showUsers ()
-
+    showUsers();
+    showCuisine();
 
 });
 //********************************************* INTERFACE END *********************************************
@@ -442,5 +466,4 @@ $(document).ready(function(){        // main program/interface
   //    - why did i do it that way? it's just how i ended up writing it in a few minutes =) 
   //    - okay, so why haven't i fixed it yet? well, 
   // 2. 
-  
   
