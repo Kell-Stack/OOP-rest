@@ -46,7 +46,7 @@ function showCuisine () {
 
 //# all functions will be above
 
-
+//*******************************************************************************************
 
 
 $(document).ready(function(){        // main program/interface

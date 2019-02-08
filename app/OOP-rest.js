@@ -15,20 +15,19 @@ class SiteDataBase {
    get restsArray () {
        return this.restaurants;
    }
-   addRestaurant(name){
-       this.restaurants.push(new Rests(name));
-
-
-    
-    
-    }
+   addRestaurant(restName, cuisine, rating){
+        this.restaurants.push(new Rests(restName, cuisine, rating));
+    };
+    addUser(firstName, lastName) {
+        this.users.push(new User(firstName, lastName));
+    };
   }
 
  //--------------------------------------------END DATABASE-------------------------------------------------------
 
 
  //--------------------------------------------START CLASSES-------------------------------------------------------
-
+//create object to add people, restaurants, etc into db
  class User {
     constructor(firstName, lastName) {
       this.firstName = firstName;
@@ -45,7 +44,6 @@ class SiteDataBase {
  }
 
 
-//create object to add people, restaurants, etc into db
 let dataBase =  new SiteDataBase ();
 
 
