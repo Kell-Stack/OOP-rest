@@ -36,6 +36,50 @@ function showCuisine () {
 }
 
 
+function addUser(){
+    let html = "";
+    html += "<br>";
+    html += this.users.push(new User(firstName, lastName));
+        $( "#fnameinput" ).submit(function( event ) {
+            // console.log("kelly sabrina sousa is the best")
+            if ( $( "#fnameinput" ).val() === "" ) {
+            return firstName;
+    }
+
+   
+    $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+    event.preventDefault();
+  });
+
+  $( "#lnameinput" ).submit(function( event ) {
+    if ( $( "input:first" ).val() === "" ) {
+      $( "span" ).text( "Validated..." ).show();
+      return;
+    }
+   
+    $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+    event.preventDefault();
+  });
+}
+
+
+// function addUser () {        
+//     prompt("Please enter your first name");
+//         if (html || " ") {
+//             return "try again, please enter your first name";
+//         } else { 
+//             return firstName;
+//         }
+//     prompt ("Please enter last name");    
+// }
+// }
+
+// function addUser(){
+//     let html = "";
+    
+// }
+
+
 // $("#").click(function(){
 
 // }
@@ -53,5 +97,7 @@ $(document).ready(function(){        // main program/interface
     showRests();
     showUsers();
     showCuisine();
+    //alert ("Welcome to Not-Yelp");
+    // addUser();
 
 });
