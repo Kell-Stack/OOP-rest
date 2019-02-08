@@ -12,7 +12,7 @@ describe("Restaurant Recommender", function() {
             testSiteDataBase.addRestaurant("a", "b", "", "");
             expect(testSiteDataBase.restaurants.length).toEqual(1);
         });
-        xit("sets the name of the restaurant", function() {
+        it("sets the name of the restaurant", function() {
             testSiteDataBase.addRestaurant("a", "b", "c", "d");
             expect(testSiteDataBase.restaurants[0].restName).toEqual("a");
         });
@@ -24,9 +24,9 @@ describe("Restaurant Recommender", function() {
             testSiteDataBase.addUser("x", "y", "z", "aa");
             expect(testSiteDataBase.users.length).toEqual(1);
         });
-        xit("sets the name of a user", function() {
+        it("sets the name of a user", function() {
             testSiteDataBase.addUser("x", "y", "z", "aa");
-            expect(testSiteDataBase.users[0].firstName + " " + testSiteDataBase.users[0].lastName).toEqual("x");
+            expect(testSiteDataBase.users[0].firstName + " " + testSiteDataBase.users[0].lastName).toEqual("x" + " " + "y");
         });
     });
 
