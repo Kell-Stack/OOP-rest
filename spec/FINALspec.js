@@ -1,20 +1,20 @@
 describe("Restaurant Recommender", function() {
-    var RestaurantRecommender = require("../app/OOP-rest.js");
-    var testRestaurantRecommender;
+    var SiteDataBase = require("../app/OOP-rest.js");        //pull it from "index"
+    var testSiteDataBase;
   
     beforeEach(function() {
-      testRestaurantRecommender = new RestaurantRecommender();
+      testSiteDataBase = new SiteDataBase();          // grabbing a new instance and putting it in this doc
     });
   
     describe("addRestaurant", function() {
       it("adds a restaurant", function() {
-        expect(testRestaurantRecommender.restaurants.length).toEqual(0);
-        testRestaurantRecommender.addRestaurant("a", "b", "", "");
-        expect(testRestaurantRecommender.restaurants.length).toEqual(1);
+        expect(testSiteDataBase.restaurants.length).toEqual(0);
+        testSiteDataBase.addRestaurant("a", "b", "", "");
+        expect(testSiteDataBase.restaurants.length).toEqual(1);
       });
       it("sets the name of the restaurant", function() {
-        testRestaurantRecommender.addRestaurant("a", "b", "", "");
-        expect(testRestaurantRecommender.restaurants[0].restaurantName).toEqual(
+        testSiteDataBase.addRestaurant("a", "b", "", "");
+        expect(testSiteDataBase.restaurants[0].restaurantName).toEqual(
           "a"
         );
       });
