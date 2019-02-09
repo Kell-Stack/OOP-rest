@@ -35,31 +35,49 @@ function showCuisine () {
     $("#cuisine1").append(html);
 }
 
+$("#newuserform").
 
-function addUser(){
-    let html = "";
-    html += "<br>";
-    html += this.users.push(new User(firstName, lastName));
-        $( "#fnameinput" ).submit(function( event ) {
-            // console.log("kelly sabrina sousa is the best")
-            if ( $( "#fnameinput" ).val() === "" ) {
-            return firstName;
-    }
+
+//when the form is submitted:
+//get the value of first name
+//get the value of last name
+//Sitedatabase.addUser(firstName, lastName)
+
+
+
+// function addUser(){
+//     // let html = "";
+//     // html += "<br>";
+
+
+    
+//     //     $( "#fnameinput" ).submit(function( event ) {
+//     //         // console.log("kelly sabrina sousa is the best")
+//     //         if ( $( "#fnameinput" ).val() === "" ) {
+//     //          ;
+//     //     });
+//     //     $( "#lnameinput" ).submit(function( event ) {
+//     //         if ( $( "input:first" ).val() === "" ) {
+//     //         $( "span" ).text( "Validated..." ).show();
+//     //         return;
+//     // }
+
+
 
    
-    $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
-    event.preventDefault();
-  });
+//     $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+//     event.preventDefault();
+//   });
 
-  $( "#lnameinput" ).submit(function( event ) {
-    if ( $( "input:first" ).val() === "" ) {
-      $( "span" ).text( "Validated..." ).show();
-      return;
-    }
+//   $( "#lnameinput" ).submit(function( event ) {
+//     if ( $( "input:first" ).val() === "" ) {
+//       $( "span" ).text( "Validated..." ).show();
+//       return;
+//     }
    
-    $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
-    event.preventDefault();
-  });
+//     $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+//     event.preventDefault();
+//   });
 }
 
 
