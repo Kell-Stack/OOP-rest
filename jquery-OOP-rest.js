@@ -35,7 +35,7 @@ function showCuisine () {
     $("#cuisine1").append(html);
 }
 
-$("#newuserform").
+//$("#newuserform").
 
 
 //when the form is submitted:
@@ -78,7 +78,7 @@ $("#newuserform").
 //     $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
 //     event.preventDefault();
 //   });
-}
+//}
 
 
 //try adding bootstap directly to metas (?)

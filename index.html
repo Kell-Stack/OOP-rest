@@ -19,29 +19,30 @@
 
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#myPage">Not-Yelp</a>
-          </div>
-          
-          <div class="collapse navbar-collapse" id="myNavbar" >
-              <div role="navigation" aria-label="Main navigation"> <!--ARIA 1-->
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">Restaurants</a></li>
-              <li><a href="#portfolio">Users</a></li>
-              <li><a href="#services">Cuisines</a></li>
-              <li><a href="#contact">FAQ</a></li>
-            </ul>
-              </div>
-          </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myPage">Not-Yelp</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div role="navigation" aria-label="Main navigation">
+                    <!--ARIA 1-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">Restaurants</a></li>
+                        <li><a href="#portfolio">Users</a></li>
+                        <li><a href="#services">Cuisines</a></li>
+                        <li><a href="#contact">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </nav> <!-- closes nav-->
+    </nav> <!-- closes nav-->
 
     <br>
     <br>
@@ -49,38 +50,101 @@
     <br>
     <div class="container">
         <div class="row">
-            <div id="rest1" class="col-sm">
+            <div id="rest1" class="col-sm">   <!--rest open div-->
+
                 <h1> Restaurants</h1>
-            </div> <!--rest close div-->
-            <div id="user1" class="col-sm">
+
+                <br> <br>
+
+                <h4> Sign up your restaurant today!</h4>
+            
+                        <form id="#newuserform" action="javascript:alert( 'Thanks for signing up' );">
+                                <p>Please enter your restaurant's name</p>
+                                <div id="restnameinput">
+                                    <input type="text">
+                                </div>
+                    
+                                <p>Please enter your address</p>
+                                <div id="restaddressinput">
+                                    <input type="text">
+                                    <input type="submit">
+                                </div>
+                        </form>
+                            <span></span>
+                            <br> <br>
+
+
+
+                <h5> See what people are saying about other restaurants in your city</h5>
+
+            </div>    <!--rest close div-->
+
+
+
+
+
+
+
+            <div id="user1" class="col-sm">    <!--users open div-->
+
                 <h1> Users</h1>
+
+                <br> <br>
+
+                <h4> HAVE A HOT TIP ABOUT YOUR FAVORITE RESTAURANT? WE'D LOVE TO HEAR IT! Sign Up Today</h4>
+            
+                        <form id="#newuserform" action="javascript:alert( 'Thanks for signing up' );">
+                                <p>Please enter your first name.</p>
+                                <div id="fnameinput">
+                                    <input type="text">
+                                </div>
+                    
+                                <p>Please enter your last name.</p>
+                                <div id="lnameinput">
+                                    <input type="text">
+                                    <input type="submit">
+                                </div>
+                        </form>
+                            <span></span>
+                            <br> <br>
+
+                            <h4> THIS TEXT BOX WILL BE WHERE PEOPLE LEAVE THEIR REVIEW COMMENT</h4>
+
+                    <textarea rows="4" cols="50">
+Pizza is delicious. yum yum yum.
+                    </textarea> 
+                </p>
+                            <h5> Check out what our top reviewers are saying</h5>
+                    
             </div>  <!--user close div-->
-            <div id="cuisine1" class="col-sm">
+            
+            
+            
+            
+            <div id="cuisine1" class="col-sm">  <!--cuisines open div-->
                 <h1> Cuisine</h1>
-            </div> <!--cuisine close div-->
+
+                <br> <br>
+
+                <h4> WE'VE GOT THE FOOD FOR ANY MOOD</h4>
+            </div>
+            <!--cuisine close div-->
         </div>
     </div>
-    
 
 
+
     <br>
     <br>
     <br>
     <br>
-    <form id="#newuserform" action="javascript:alert( 'Thanks for signing up' );">
-            <p>Please enter your first name.</p>
-      <div id="fnameinput">
-        <input type="text">
-      </div>
-    <br>
-    <br>
-    <p>Please enter your last name.</p>
-        <div id="lnameinput">
-            <input type="text"> 
-            <input type="submit">
-        </div>
-    </form>
-    <span></span>
+
+
+
+
+
+
+
 
 
     <!--Bootstrap jQuery-->
@@ -88,7 +152,8 @@
         crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="OOP-rest.js"></script>
-    <script src="jquery-OOP-rest.js"></script>     <!--jQuery doc/code-->
+    <script src="jquery-OOP-rest.js"></script>
+    <!--jQuery doc/code-->
 </body>
 
 </html>

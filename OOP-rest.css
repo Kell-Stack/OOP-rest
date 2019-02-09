@@ -6,15 +6,7 @@ h1:hover {
     background: green;
   }
 
-  form { 
-    display: block;
-    margin-top: 0em;
-  }
 
-
-
-
-//--------------------
 
   .navbar {
     margin-bottom: 0;
@@ -140,12 +132,4 @@ h1:hover {
   .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
-  }
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #981CEB;
-
-  }
-
   }
