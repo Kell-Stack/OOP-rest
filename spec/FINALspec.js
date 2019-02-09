@@ -1,5 +1,5 @@
 describe("Restaurant Recommender", function() {
-    var SiteDataBase = require("../app/OOP-rest.js");        //pull it from "index"
+    var SiteDataBase = require("../OOP-restaurant-project/OOP-rest.js");        //pull it from "index"
     var testSiteDataBase;
   
     beforeEach(function() {
@@ -29,5 +29,5 @@ describe("Restaurant Recommender", function() {
             expect(testSiteDataBase.users[0].firstName + " " + testSiteDataBase.users[0].lastName).toEqual("x" + " " + "y");
         });
     });
-
+    
 });

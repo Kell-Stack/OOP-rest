@@ -63,6 +63,8 @@ function addUser(){
 }
 
 
+//try adding bootstap directly to metas (?)
+
 // function addUser () {        
 //     prompt("Please enter your first name");
 //         if (html || " ") {
